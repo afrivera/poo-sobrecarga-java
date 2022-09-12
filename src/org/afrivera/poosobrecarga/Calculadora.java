@@ -2,12 +2,16 @@ package org.afrivera.poosobrecarga;
 
 public class Calculadora {
 
+    // para que no se pueda instanciar la clase se pone el constructor en private
+    private Calculadora() {
+    }
+
     // sobrecarga de metodos: deben recibir diferentes parametros
-    public int sumar(int a, int b){
+    public static int sumar(int a, int b){
         return a + b;
     }
 
-    public int sumar(int... args){
+    public static int sumar(int... args){
         int lng = args.length;
         int total = 0;
         for (int i = 0; i < lng; i++) {
@@ -15,7 +19,7 @@ public class Calculadora {
         }
         return total;
     }
-    public float sumar(float a ,int... args){
+    public static float sumar(float a ,int... args){
         int lng = args.length;
         float total = a;
         for (int i = 0; i < lng; i++) {
@@ -24,23 +28,23 @@ public class Calculadora {
         return total;
     }
 
-    public float sumar(float a, float b){
+    public static float sumar(float a, float b){
         return a + b;
     }
 
-    public float sumar(int a, float b){
+    public static float sumar(int a, float b){
         return a + b;
     }
 
-    public float sumar(float a, int b){
+    public static float sumar(float a, int b){
         return a + b;
     }
 
-    public double sumar(double a, double b){
+    public static double sumar(double a, double b){
         return a + b;
     }
 
-    public int sumar(String a, String b){
+    public static int sumar(String a, String b){
         int resultado;
         try {
             resultado = Integer.parseInt(a) + Integer.parseInt(b);
@@ -52,7 +56,7 @@ public class Calculadora {
         return resultado;
     }
 
-    public int sumar(int a, int b, int c){
+    public static int sumar(int a, int b, int c){
         return a + b + c;
     }
 }
